@@ -1,0 +1,20 @@
+{
+  "name": "node_docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "deploy":"docker build -t niradler/node-web-app .",
+    "run":"docker run -p 49160:8080 -d niradler/node-web-app",
+    "logs":"docker log container-id",
+    "status":"docker ps"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
